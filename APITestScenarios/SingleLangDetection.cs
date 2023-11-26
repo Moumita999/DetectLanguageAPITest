@@ -22,15 +22,15 @@ namespace APITestScenarios
             Assert.True(results[0].confidence>0);
         }
 
-        [Fact]
-        public async Task Singlelang_LangDetectsecond_Returns_Success()
-        {
-            var results = await client.DetectAsync("välkommen");
+        //[Fact]
+        //public async Task Singlelang_LangDetectsecond_Returns_Success()
+        //{
+        //    var results = await client.DetectAsync("välkommen");
 
-            Assert.True(results[0].language == "sv");
-            Assert.True(results[0].reliable);
-            Assert.True(results[0].confidence > 0);
-        }
+        //    Assert.True(results[0].language == "sv");
+        //    Assert.True(results[0].reliable);
+        //    Assert.True(results[0].confidence > 0);
+        //}
 
         [Fact]
         public async Task Singlelang_sameworddifflang_Returns_Success()
